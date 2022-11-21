@@ -1,5 +1,4 @@
-﻿
-module Scores
+﻿open System
 
 type Title =
 | Awesome

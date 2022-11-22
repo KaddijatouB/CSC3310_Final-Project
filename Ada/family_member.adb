@@ -3,18 +3,26 @@ use Ada.Text_IO;
 
 --  Create a family for record type 
 procedure family_member is
+     type Names is
+     (Jerome, Kay, Jabin, Jacobi);
+     
+    type Relationship is
+     (Mother, Father, Child);
+     
   -- the family record will have type string and integer
   type Family is record
-  Name      : String;
-  Relation  : String;
+  Name      : Names;
+  Relation  : Relationship;
   Age       : Integer;
   end record;
+  
   -- Method to print out record information 
   procedure Print_Member(Joof : Family) is
    begin
-      Put_Line ("Name:" & String'Image (Joof.Name)
+      -- use the Image attribute to print values
+      Put_Line ("Name:" & Names'Image (Joof.Name)
                 & ", Relationship: "
-                & String'Image (Joof.Relation)
+                & Relationship'Image (Joof.Relation)
                 & ", Age:"
                 & Integer'Image (Joof.Age));
   end Print_Member;

@@ -4,7 +4,7 @@ open System
 [<EntryPoint>]
 let main argv =
     //initialize a map
-    let generes = Map [(1, "action"); (2, "romance"); (3, "sci-fi")]
+    let generes = Map [(1, "action"); (2, "romance"); (4, "sci-fi")]
     printfn "Entertainment Generes: %A" generes
     
     //iterate through map
@@ -16,9 +16,14 @@ let main argv =
     let avengers = generes.[1]
     //let notFound = generes.[9] //throws KeyNotFoundException
     printfn "Avengers: %A" avengers
+
+    //Find an element in map by key
+    let miraculous = generes.Item 2
+    printfn "Miraculous Ladybug: %A" miraculous
+    //let error = generes.Item 9 //throws KeyNotFoundException
     
     //add a key-value pair to map
-    let addGeneres = generes |> Map.add 4 "adventure"
+    let addGeneres = generes |> Map.add 3 "adventure"
     printfn "Added a genere: %A" addGeneres
     //replaces instead of adds
     let replaceGeneres = generes.Add(2, "documentary")
@@ -41,8 +46,8 @@ let main argv =
     printfn "No remove: %A" noRemove
     
     //Checking if an item at key is in the map
-    let contained = generes |> Map.containsKey 3
-    printfn "Is there an item 3: %A" contained
+    let contained = generes |> Map.containsKey 4
+    printfn "Is there an item 4: %A" contained
     let nonContained = generes.ContainsKey 7
     printfn "Is there an item 7: %A" nonContained
     
@@ -57,11 +62,6 @@ let main argv =
     let notEmpty = generes.IsEmpty
     printfn "Non-empty map: %A" notEmpty
     
-    //Find an element in map by key
-    let miraculous = generes.Item 2
-    printfn "Miraculous Ladybug: %A" miraculous
-    //let error = generes.Item 9 //throws KeyNotFoundException
-    
     //Find an element in map by key (Returns Some or None)
     let printObt x =
         match x with
@@ -74,7 +74,7 @@ let main argv =
 
     //Find an element in map and assign to a variable if found
     let mutable x = ""
-    let adv = generes.TryGetValue(3, &x)
+    let adv = generes.TryGetValue(4, &x)
     printfn "Jungle Book: %A found: %A" x adv
     let mutable y = ""
     let gone = generes.TryGetValue(8, &y)

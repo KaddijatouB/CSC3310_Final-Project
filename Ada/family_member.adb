@@ -2,7 +2,7 @@ with Ada.Text_IO;
 use Ada.Text_IO;
 
 --  Create a family for record type 
-procedure FamilyMember is
+procedure family_member is
 
   type Family is record
   Name      : String ;
@@ -18,4 +18,4 @@ procedure FamilyMember is
     Joof.Relation := Father;
     Joof.Age := 36;
    
-end FamilyMember;
+end family_member;

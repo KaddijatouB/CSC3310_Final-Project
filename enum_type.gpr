@@ -1,0 +1,8 @@
+project enum_type is
+   for Main use ("enum_type.adb");
+   for Object_Dir use ".objs";
+
+   package Compiler is
+      for Default_Switches ("Ada") use ("-g");
+   end Compiler;
+end enum_type;

@@ -13,7 +13,7 @@ class Lists
         // Capacity explicitly
         List<int> list1 = new List<int>();
 
-        // adding elements in firstlist
+        // adding elements in list1
         list1.Add(20);
         list1.Add(82);
         list1.Add(79);
@@ -44,10 +44,12 @@ class Lists
         Console.WriteLine("Count Is: " + list1.Count);
         //checks whether a list contains a value
         //return true if existed, false otherwise
+        Console.WriteLine("contains:" + list1.Contains(20));
         Console.WriteLine("contains:" + list1.Contains(1));
         //remove an element at index x
         //return true if the element is remvoved, false otherwise
-        Console.WriteLine("Remove:" + list1.Remove(6));
+        Console.WriteLine("Remove:" + list1.Remove(100));
+        Console.WriteLine("Remove:" + list1.Remove(300));
         //clear list1
         foreach(int i in list1)
         {

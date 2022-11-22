@@ -10,7 +10,7 @@ type Title =
 
 type Score =
 | Grade of float //case identifier for an unamed float
-| Rank of Title //case identifier for another union
+| Rank of Title //case identifier for another union (object)
 | Points of //case identifier for a set of values
     items: int * //star indicates that the types must go together (like a tuple)
     time: float * 
@@ -61,6 +61,7 @@ let main argv =
         //without option type
     let nay = Comments('N', None)
     //output
+    getTitle fail
     getScore gpa
     getScore noob
     getScore pro

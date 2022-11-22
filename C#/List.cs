@@ -13,7 +13,7 @@ class Lists
         // Capacity explicitly
         List<int> list1 = new List<int>();
 
-        // adding elements in firstlist
+        // adding elements in list1
         list1.Add(20);
         list1.Add(82);
         list1.Add(79);

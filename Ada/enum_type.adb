@@ -3,25 +3,19 @@ use Ada.Text_IO;
 
 procedure enum_type is
 -- Declay an enum for family member names
-    type MyFamily is
+    type STUDENT is
     (
-        Jerome,
-        Kay,
-        Jabin,
-        Jacobi,
-        Michaella,
-        Donald
+        GradeA, 
+        GradeB, 
+        GradeC, 
+        GradeD, 
+        GradeE
     );
-
-    for MyFamily use 
-    (
-        Jerome => Mother,
-        Kay => Father,
-        Jabin => Son,
-        Jacobi => Son,
-        Michaella => GrandMother,
-        Donald => GrandFather);
    
     begin
+    STUDENT'Pos (GradeA);
+    STUDENT'Val (1);
+    STUDENT'Image (GradeA);
+    STUDENT'Value ("GradeB");
 
 end enum_type;

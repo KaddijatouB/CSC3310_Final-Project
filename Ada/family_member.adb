@@ -28,8 +28,8 @@ procedure family_member is
   end Print_Member;
 
   --list each family member info 
-  Joof_Member1 : Family := (Jerome, Father, 36);
-  Joof_Member2 : Family := (Kay, Mother, 32);
+  Joof_Member1 : Family := (Jerome, Father, 32);
+  Joof_Member2 : Family := (Kay, Mother, 30);
   Joof_Member3 : Family := (Jabin, Child, 3);
   Joof_Member4 : Family := (Jacobi, Child, 1);
 
